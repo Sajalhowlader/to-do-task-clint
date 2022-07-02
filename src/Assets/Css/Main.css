@@ -1,0 +1,14 @@
+.siteName {
+  font-family: "Galada", cursive;
+}
+.siteName span {
+  color: #fb0c59;
+  font-size: 2.5rem;
+}
+.log-btn {
+    background: #00c500;
+    padding: 8px 14px;
+    border-radius: 5px;
+    font-weight: bold;
+    color: white;
+}

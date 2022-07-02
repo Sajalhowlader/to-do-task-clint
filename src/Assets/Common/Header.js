@@ -34,8 +34,8 @@ const Header = () => {
               {menuLink}
             </ul>
           </div>
-          <p to="/" class="cursor-pointer text-3xl text-blue-400 font-bold">
-            TakeTask
+          <p to="/" class="cursor-pointer text-3xl text-blue-400 font-bold siteName">
+            Take<span>T</span>ask
           </p>
         </div>
         <div class="navbar-center hidden lg:flex">

@@ -20,3 +20,11 @@
   align-items: center;
   display: flex;
 }
+.googleLog {
+  background: linear-gradient(70deg, #01103c, #e7133a);
+  padding: 6px 25px;
+  border-radius: 10px;
+  font-size: 20px;
+  font-weight: bold;
+  color: white;
+}

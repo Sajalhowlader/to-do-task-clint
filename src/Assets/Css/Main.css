@@ -12,3 +12,11 @@
     font-weight: bold;
     color: white;
 }
+
+/* Log in section  */
+.loin_container {
+  height: 80vh;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}

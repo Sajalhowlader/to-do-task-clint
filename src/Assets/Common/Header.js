@@ -1,6 +1,7 @@
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 const Header = () => {
+  const navigate = useNavigate()
   const menuLink = (
     <>
       <li>
@@ -19,6 +20,10 @@ const Header = () => {
       </li>
     </>
   );
+
+const goLoin =()=>{
+  navigate('/logIn')
+}
   return (
     <nav className="bg-[#f6f9fd]">
       <div class="navbar container mx-auto py-3">
@@ -44,7 +49,7 @@ const Header = () => {
           </ul>
         </div>
         <div class="navbar-end">
-          <button className="log-btn"><i class="fa-solid fa-arrow-right-from-bracket"></i> LogIn</button>
+          <button onClick={goLoin} className="log-btn"><i class="fa-solid fa-arrow-right-from-bracket"></i> LogIn</button>
         </div>
       </div>
     </nav>

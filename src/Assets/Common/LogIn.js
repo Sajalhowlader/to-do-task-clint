@@ -1,5 +1,5 @@
 import { useSignInWithGoogle } from "react-firebase-hooks/auth";
-import toast from "react-hot-toast";
+
 import auth from "../../firebase.init";
 import googleImg from "../../Images/google3.png";
 
@@ -9,7 +9,7 @@ const LogIn = () => {
     signInWithGoogle();
   };
   if (error) {
-    toast.error(error.message);
+    
   }
   return (
     <div className="loin_container">

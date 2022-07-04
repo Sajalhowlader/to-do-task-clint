@@ -13,10 +13,7 @@ function App() {
           <Route path={path} element={<Component />} key={index} />
         ))}
       </Routes>
-      <Toaster 
-      position="top-center"
-      reverseOrder={false}
-      />
+    
     </div>
   );
 }

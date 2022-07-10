@@ -4,7 +4,7 @@ const Home = () => {
     <div className="home-container">
      <div className="img_title">
      <img src={toDo} alt="" />
-      <p className="todo-title">Make Your To-Do</p>
+      <button className="todo-title">Make Your To-Do</button>
      </div>
     </div>
   );

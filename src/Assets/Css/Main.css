@@ -50,3 +50,35 @@
   background: #dde4e957;
   box-shadow: 1px 2px 1px 1px #e1e0e0b3;
 }
+.preloader {
+  height: 80vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.preloader img {
+  width: 350px;
+}
+
+/* Add task */
+
+.if-user h1 {
+  text-align: center;
+  font-size: 30px;
+  font-weight: bold;
+  color: #00c500;
+}
+
+.if-user {
+  height: 80vh;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+}
+.font-style {
+  font-size: 16px;
+  color: #403d3d;
+  font-weight: 600;
+}

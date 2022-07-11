@@ -1,8 +1,11 @@
+import { signOut } from "firebase/auth";
+import { useAuthState } from "react-firebase-hooks/auth";
 import { Link, useNavigate } from "react-router-dom";
-import Home from "../Home/Home";
+import auth from "../../firebase.init";
 
 const Header = () => {
   const navigate = useNavigate();
+  const [user] = useAuthState(auth);
   const menuLink = (
     <>
       <li>
@@ -12,10 +15,10 @@ const Header = () => {
         <Link to="/toDo">TO-DO</Link>
       </li>
       <li>
-        <Link to="/">COMPLETE</Link>
+        <Link to="/complete">COMPLETE</Link>
       </li>
       <li>
-        <Link to="/" className="bg">
+        <Link to="/calender" className="bg">
           CALENDER
         </Link>
       </li>
@@ -24,6 +27,10 @@ const Header = () => {
 
   const goLoin = () => {
     navigate("/logIn");
+  };
+
+  const goLogOut = () => {
+    signOut(auth);
   };
   return (
     <>
@@ -54,14 +61,22 @@ const Header = () => {
             </ul>
           </div>
           <div class="navbar-end">
-            <button onClick={goLoin} className="log-btn">
-              <i class="fa-solid fa-arrow-right-from-bracket"></i> LogIn
-            </button>
+            {user ? (
+              <>
+                <button onClick={goLogOut} className="log-btn">
+                  <i class="fa-solid fa-arrow-right-from-bracket"></i> LogOut
+                </button>
+              </>
+            ) : (
+              <>
+                <button onClick={goLoin} className="log-btn">
+                  <i class="fa-solid fa-arrow-right-from-bracket"></i> LogIn
+                </button>
+              </>
+            )}
           </div>
         </div>
       </nav>
-
-      <Home />
     </>
   );
 };

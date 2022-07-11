@@ -14,7 +14,7 @@ function App() {
           <Route path={path} element={<Component />} key={index} />
         ))}
 
-        <Route element={Protected}>
+        <Route element={<Protected />}>
           {closeRoute.map(({ path, Component }, index) => (
             <Route path={path} element={<Component />} key={index} />
           ))}
